@@ -1,0 +1,31 @@
+<title>{{'titles.roles' | translate}}</title>
+<h4 class="custom-page-title"><span>{{'titles.roles' | translate}}</span></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 offset-md-10">
+        <button (click)="goToAdd()" class="btn btn-add btn-success">
+          <i class="fa fa-plus"></i>
+          {{'buttons.add' | translate}}
+        </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <table class="table">
+        <tr>
+            <td class="name-col"><strong>{{'shared.role' | translate}}</strong></td>
+            <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
+        </tr>
+        <tr class="row-data" *ngFor="let role of roles" (click)="goToEdit(role.id)">
+          <td class="name-col">
+            {{getRoleName(role.name)}}
+          </td>
+          <td class="action-col">
+            <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(role.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
+            <button class="btn btn-sm btn-outline-danger" (click)="onDelete(role.id, getRoleName(role.name)); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

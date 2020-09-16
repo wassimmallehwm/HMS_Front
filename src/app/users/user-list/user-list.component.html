@@ -1,0 +1,35 @@
+<title>{{'titles.users' | translate}}</title>
+<h4 class="custom-page-title"><span>{{'titles.users' | translate}}</span></h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 offset-md-10">
+          <button (click)="goToAdd()" class="btn btn-add btn-success">
+            <i class="fa fa-plus"></i>
+            {{'buttons.add' | translate}}
+          </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <table class="table">
+          <tr>
+            <td class="name-col"><strong>{{'shared.fullname' | translate}}</strong></td>
+            <td class="role-col"><strong>{{'shared.role' | translate}}</strong></td>
+            <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
+          </tr>
+          <tr class="row-data" *ngFor="let user of users" (click)="goToEdit(user.id)">
+              <td class="name-col">
+                {{user.name}}
+              </td>
+              <td class="role-col">
+                {{getRoleName(user.roles)}}
+              </td>
+            <td class="action-col">
+              <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(user.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
+              <button class="btn btn-sm btn-outline-danger" (click)="onDelete(user.id, user.name); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

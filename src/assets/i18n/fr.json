@@ -1,0 +1,65 @@
+{
+  "menu" : {
+    "dashboard" : "Tableau de bord",
+    "adminTools" : "Outils d'administration",
+    "users" : "Utilisateurs",
+    "locations" : "Emplacements",
+    "staff" : "Equipes",
+    "roles" : "Roles",
+    "airplanes" : "Avions"
+  },
+  "titles" : {
+    "users" : "Les utilisateurs",
+    "addUser" : "Ajouter un utilisateur",
+    "editUser" : "Modifier un utilisateur",
+    "roles" : "Les roles",
+    "addRole" : "Ajouter un role",
+    "editRole" : "Modifier un role",
+    "locations" : "Les emplacements",
+    "addLocation" : "Ajouter un emplacement",
+    "editLocation" : "Modifier un emplacement",
+    "staff" : "Les équipes",
+    "addStaff" : "Ajouter une équipe",
+    "editStaff" : "Modifier une équipe",
+    "airplanes" : "Les avions",
+    "addAirplane" : "Ajouter un avion",
+    "editAirplane" : "Modifier un avion"
+  },
+  "buttons" : {
+    "login" : "Se connecter",
+    "logout" : "Se déconnecter",
+    "add" : "Ajouter",
+    "edit" : "Modifier",
+    "delete" : "Supprimer",
+    "confirm" : "Êtes-vous sûr ?"
+  },
+  "shared" : {
+    "yes" : "Oui",
+    "no" : "Non",
+    "cancel" : "Annuler",
+    "canceled" : "Annulée",
+    "deleted" : "Supprimé",
+    "notDeleted" : "Non Supprimé",
+    "fullname" : "Nom Complet",
+    "name" : "Nom",
+    "username" : "Nom d'utilisateur",
+    "password" : "Mot de passe",
+    "confirmpassword" : "Confirmez le mot de passe",
+    "role" : "Role",
+    "action" : "Action",
+    "reference" : "Référence",
+    "chief" : "Chef",
+    "members" : "Membres",
+    "profile" : "Profile",
+    "designation" : "Désignation",
+    "reactorType" : "Type de réacteur",
+    "language" : "Langue",
+    "theme" : "Thème"
+  },
+  "errors" : {
+    "error" : "Erreur",
+    "invalid" : "Invalid",
+    "requiredField" : "Champs obligatoire",
+    "passwordMatch" : "Les mots de passe doivent correspondre"
+  }
+}

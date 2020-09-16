@@ -1,0 +1,65 @@
+{
+  "menu" : {
+    "dashboard" : "Dashboard",
+    "adminTools" : "Administration tools",
+    "users" : "Users",
+    "locations" : "Locations",
+    "staff" : "Staff",
+    "roles" : "Roles",
+    "airplanes" : "Airplanes"
+  },
+  "titles" : {
+    "users" : "Users",
+    "addUser" : "Add User",
+    "editUser" : "Edit User",
+    "roles" : "Roles",
+    "addRole" : "Add Role",
+    "editRole" : "Edit Role",
+    "locations" : "Locations",
+    "addLocation" : "Add Location",
+    "editLocation" : "Edit Location",
+    "staff" : "Staff",
+    "addStaff" : "Add Staff",
+    "editStaff" : "Edit Staff",
+    "airplanes" : "Airplanes",
+    "addAirplane" : "Add Airplane",
+    "editAirplane" : "Edit Airplane"
+  },
+  "buttons" : {
+    "login" : "Login",
+    "logout" : "Logout",
+    "add" : "Add",
+    "edit" : "Update",
+    "delete" : "Delete",
+    "confirm" : "Are you sure?"
+  },
+  "shared" : {
+    "yes" : "Yes",
+    "no" : "No",
+    "cancel" : "Cancel",
+    "canceled" : "Canceled",
+    "deleted" : "Deleted",
+    "notDeleted" : "Not Deleted",
+    "fullname" : "Full name",
+    "name" : "Name",
+    "username" : "Username",
+    "password" : "Password",
+    "confirmpassword" : "Confirm password",
+    "role" : "Role",
+    "action" : "Action",
+    "reference" : "Reference",
+    "chief" : "Chief",
+    "members" : "Members",
+    "profile" : "Profile",
+    "designation" : "Designation",
+    "reactorType" : "Reactor type",
+    "language" : "Language",
+    "theme" : "Theme"
+  },
+  "errors" : {
+    "error" : "Error",
+    "invalid" : "Invalid",
+    "requiredField" : "Required field",
+    "passwordMatch" : "Passwords must match"
+  }
+}

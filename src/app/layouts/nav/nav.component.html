@@ -1,0 +1,192 @@
+<!-- Start wrapper-->
+<div id="wrapper" class="">
+
+  <!--Start sidebar-wrapper-->
+    <div id="sidebar-wrapper" class="bg-theme" data-simplebar="" data-simplebar-auto-hide="true">
+      <div class="brand-logo">
+       <a routerLink='/'>
+        <img src="assets/images/nav-logo.png" class="logo-icon" alt="logo icon">
+        <h5 class="logo-text">Air Performance</h5>
+      </a>
+    </div>
+    <div class="user-details">
+     <div id="user-details" class="media align-items-center user-pointer collapsed" data-toggle="sidebar-colapse" data-target="#user-dropdown">
+        <div class="avatar"><img class="mr-3 side-user-img" src="assets/images/default_user.jpg" alt="img"></div>
+        <div class="media-body">
+          <h6 class="side-user-name"> {{currentUser.name}} </h6>
+        </div>
+      </div>
+      <div id="user-dropdown" class="collapse">
+        <ul class="user-setting-menu">
+            <li class="clickable"><a routerLink="/profile" ><i class="icon-user"></i>{{'shared.profile' | translate}}</a></li>
+            <li class="clickable"><a (click)="logout()"><i class="icon-power"></i>{{'buttons.logout' | translate}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="sidebar-container" class="sidebar-expanded">
+      <ul class="sidebar-menu do-nicescrol">
+        <li>
+          <a routerLink="/home" routerLinkActive="active">
+            <i class="zmdi zmdi-view-dashboard"></i> <span>{{'menu.dashboard' | translate}}</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/admin-tools" routerLinkActive="active">
+            <i class="zmdi zmdi-settings"></i> <span>{{'menu.adminTools' | translate}}</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/roles/list" routerLinkActive="active">
+            <i class="zmdi zmdi-badge-check"></i> <span>{{'menu.roles' | translate}}</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/users/list" routerLinkActive="active">
+            <i class="zmdi zmdi-account"></i> <span>{{'menu.users' | translate}}</span>
+          </a>
+        </li>
+
+        <!-- <li class="submenu" (click)="clickProdSubMenu()">
+            <div>
+                <a id="prods" class="media align-items-center user-pointer collapsed" data-toggle="sidebar-colapse"
+                data-target="#prods-dropdown">
+                <i class="zmdi zmdi-shopping-basket"></i>
+                <span id="product_span">Products</span>
+              </a>
+            </div>
+            <div id="prods-dropdown" class="collapse">
+              <ul class="user-setting-menu sub-list">
+                <li class="submenu-item">
+                  <a class="disabled" routerLink="/products/list" routerLinkActive="active">
+                    <i class="zmdi zmdi-shopping-basket"></i> Products
+                  </a>
+                </li>
+
+                <li class="submenu-item">
+                  <a class="disabled" routerLink="/categories/list" routerLinkActive="active">
+                    <i class="zmdi zmdi-view-list"></i>Categories
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </li> -->
+      </ul>
+    </div>
+
+
+  </div>
+  <!--End sidebar-wrapper-->
+
+ <!--Start topbar header-->
+ <header class="topbar-nav">
+  <nav class="navbar navbar-expand fixed-top">
+   <ul class="navbar-nav mr-auto align-items-center">
+     <li class="nav-item">
+       <a class="nav-link toggle-menu" (click)="null">
+        <i class="icon-menu menu-icon"></i>
+      </a>
+     </li>
+   </ul>
+
+
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a id="notifLink" class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown"
+        href="javascript:void();">
+        <i class="fa fa-bell-o"></i>
+        <span class="badge badge-info badge-up">5</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a class="clickable">
+              <div class="media">
+                <div class="media-body">
+
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a class="clickable">
+              <div class="media">
+                <div class="media-body">
+
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a class="clickable">
+              <div class="media">
+                <div class="media-body">
+
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="list-group-item text-center"><a routerLink="/notifications" >See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item language">
+      <a id="userLink" class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect clickable" data-toggle="dropdown">
+        <i class="zmdi zmdi-account"></i> {{currentUser.username}}
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item clickable"><a routerLink="/profile" ><i class="icon-user mr-2"></i>{{'shared.profile' | translate}}</a></li>
+          <li class="dropdown-divider"></li>
+          <li class="dropdown-item clickable"><a (click)="logout()"><i class="icon-power mr-2"></i>{{'buttons.logout' | translate}}</a></li>
+      </ul>
+    </li>
+    <!-- <li id="logoutLink" class="nav-item">
+      <a (click)="logout()" class="clickable" routerLinkActive="router-link-active">
+        <i class="icon-power"></i>
+        {{'buttons.logout' | translate}}
+      </a>
+    </li> -->
+    <!-- <li class="nav-item">
+      <a id="logoutLink" class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect clickable" data-toggle="dropdown">
+          current user
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li (click)="logout()" class="dropdown-item clickable">
+          <i class="icon-power"></i>
+          {{'buttons.logout' | translate}}
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+ </nav>
+ </header>
+ <!--End topbar header-->
+
+
+  <div class="main-container">
+      <div class="content-wrapper">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+  </div><!--End content-wrapper-->
+
+
+  <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+
+  <!--Start footer-->
+  <footer class="footer fixed-bottom">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 Hotels Management System
+        </div>
+      </div>
+    </footer>
+  <!--End footer-->
+
+</div><!--End wrapper-->
+
