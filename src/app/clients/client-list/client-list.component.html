@@ -1,0 +1,39 @@
+<title>{{'titles.clients' | translate}}</title>
+<h4 class="custom-page-title"><span>{{'titles.clients' | translate}}</span></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 offset-md-10">
+        <button (click)="goToAdd()" class="btn btn-add btn-success">
+          <i class="fa fa-plus"></i>
+          {{'buttons.add' | translate}}
+        </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <table class="table">
+        <tr>
+          <td class="cin-col"><strong>{{'shared.cin' | translate}}</strong></td>
+          <td class="name-col"><strong>{{'shared.name' | translate}}</strong></td>
+          <td class="phone-col"><strong>{{'shared.tel' | translate}}</strong></td>
+          <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
+        </tr>
+        <tr class="row-data" *ngFor="let client of clients" (click)="goToEdit(client.id)">
+          <td class="cin-col">
+            {{client.cin}}
+          </td>
+          <td class="name-col">
+            {{client.firstname}} {{client.lastname}}
+          </td>
+          <td class="phone-col">
+            {{client.phone}}
+          </td>
+          <td class="action-col">
+            <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(client.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
+            <button class="btn btn-sm btn-outline-danger" (click)="onDelete(client.id, client.firstname + ' ' + client.lastname); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

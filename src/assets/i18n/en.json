@@ -5,7 +5,9 @@
     "users" : "Users",
     "roles" : "Roles",
     "hotels" : "Hotels",
-    "chambers" : "Chambers"
+    "chambers" : "Chambers",
+    "clients" : "Clients",
+    "reservations" : "Reservations"
   },
   "titles" : {
     "users" : "Users",
@@ -28,7 +30,8 @@
     "editHotel" : "Edit Hotel",
     "chambers" : "Chambers",
     "addChamber" : "Add Chamber",
-    "editChamber" : "Edit Chamber"
+    "editChamber" : "Edit Chamber",
+    "clients" : "Clients"
   },
   "buttons" : {
     "login" : "Login",
@@ -57,7 +60,6 @@
     "members" : "Members",
     "profile" : "Profile",
     "designation" : "Designation",
-    "reactorType" : "Reactor type",
     "language" : "Language",
     "theme" : "Theme",
     "city" : "City",
@@ -65,9 +67,9 @@
     "tel" : "Phone",
     "adresse" : "Adresse",
     "type" : "Type",
-    "ref" : "Reference",
     "hotel" : "Hotel",
-    "price" : "Price"
+    "price" : "Price",
+    "cin" : "ID card"
   },
   "errors" : {
     "error" : "Error",

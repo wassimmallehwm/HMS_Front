@@ -19,6 +19,8 @@ import { ChamberListComponent } from './chambers/chamber-list/chamber-list.compo
 import { ChamberAddComponent } from './chambers/chamber-add/chamber-add.component';
 import { AccueilComponent } from './guest/accueil/accueil.component';
 import { NonAuthGuard } from './auth/non-auth.guard';
+import { ClientListComponent } from './clients/client-list/client-list.component';
+import { ReservationListComponent } from './reservations/reservation-list/reservation-list.component';
 
 const routes: Routes = [
   {
@@ -122,6 +124,16 @@ const routes: Routes = [
       {
           path: 'chambers/:id',
           component: ChamberAddComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'clients/list',
+          component: ClientListComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'reservations/list',
+          component: ReservationListComponent,
           canActivate: [AuthGuard]
       }
     ]

@@ -26,6 +26,9 @@ import { HotelAddComponent } from './hotels/hotel-add/hotel-add.component';
 import { ChamberAddComponent } from './chambers/chamber-add/chamber-add.component';
 import { ChamberListComponent } from './chambers/chamber-list/chamber-list.component';
 import { AccueilComponent } from './guest/accueil/accueil.component';
+import { ReservationAddComponent } from './reservations/reservation-add/reservation-add.component';
+import { ReservationListComponent } from './reservations/reservation-list/reservation-list.component';
+import { ClientListComponent } from './clients/client-list/client-list.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http);
@@ -50,7 +53,10 @@ export function HttpLoaderFactory(http: HttpClient){
     HotelAddComponent,
     ChamberAddComponent,
     ChamberListComponent,
-    AccueilComponent
+    AccueilComponent,
+    ReservationAddComponent,
+    ReservationListComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,

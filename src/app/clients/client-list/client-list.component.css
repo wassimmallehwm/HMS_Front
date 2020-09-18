@@ -1,0 +1,19 @@
+.name-col{
+    width: 30%;
+}
+.cin-col{
+    width: 30%;
+}
+.phone-col{
+    width: 20%;
+}
+
+.action-col{
+    width: 20%
+}
+
+.row-data:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+  
