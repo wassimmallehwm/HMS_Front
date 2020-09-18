@@ -1,0 +1,100 @@
+<div class="row">
+  <div *ngIf="step == 1" class="col-md-12 text-center">
+    <h3>
+      <a (click)="setStep(1)">{{'titles.personalDetails' | translate}}</a>
+    </h3>
+  </div>
+  <div *ngIf="step == 2" class="col-md-12 text-center">
+    <h3>
+      <a (click)="setStep(2)">{{'titles.reservations' | translate}}</a>
+    </h3>
+  </div>
+</div>
+
+<div style="margin: 25px 0;" *ngIf="step == 1">
+
+  <div class="row">
+    <div class="col-lg-6 offset-md-3">
+                <form [formGroup]="form" (submit)="onSubmit()">
+                  <div class="form-group">
+                    <label for="cin">{{'shared.cin' | translate}}</label>
+                    <input type="number" class="form-control" formControlName="cin" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="firstname">{{'shared.firstname' | translate}}</label>
+                    <input type="text" class="form-control" formControlName="firstname" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastname">{{'shared.lastname' | translate}}</label>
+                    <input type="text" class="form-control" formControlName="lastname" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="age">{{'shared.age' | translate}}</label>
+                    <input type="number" class="form-control" formControlName="age" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">{{'shared.email' | translate}}</label>
+                    <input type="email" class="form-control" formControlName="email" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">{{'shared.phone' | translate}}</label>
+                    <input type="text" class="form-control" formControlName="phone" />
+                  </div>
+
+                    <div class="form-group">
+                      <button style="float: right;" type="submit" class="btn btn-primary"> {{'shared.next' | translate}} </button>
+                    </div>
+                  </form>
+            </div>
+          </div>
+</div>
+
+<div style="margin: 25px 0;" *ngIf="step == 2">
+
+  <div class="row">
+    <div class="col-lg-6 offset-md-3">
+                <form [formGroup]="formReservation" (submit)="onSubmitReservation()">
+                  <div class="form-group">
+                    <label for="type">{{'shared.type' | translate}}</label>
+                    <select (change)="calculate($event)" class="form-control" name="chamberType" formControlName="chamberType">
+                        <option *ngFor="let type of types" [ngValue]="type.name">
+                            {{ type.name }}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="duration">{{'shared.duration' | translate}}</label>
+                    <input (keyup)="calculate($event)" type="number" class="form-control" formControlName="duration" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="price">{{'shared.price' | translate}}</label>
+                    <input disabled type="number" class="form-control" formControlName="price" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="nbAdultes">{{'shared.nbAdultes' | translate}}</label>
+                    <input type="number" class="form-control" formControlName="nbAdultes" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="nbKids">{{'shared.nbKids' | translate}}</label>
+                    <input type="number" class="form-control" formControlName="nbKids" />
+                  </div>
+
+                    <div class="form-group">
+                      <button style="float: right;" type="submit" class="btn btn-primary"> {{'shared.next' | translate}} </button>
+                    </div>
+                  </form>
+            </div>
+          </div>
+</div>
+<div style="margin: 25px 0;" *ngIf="step == 3">
+  <h2 class="text-success text-center">{{'titles.reservSuccess' | translate}}</h2>
+</div>

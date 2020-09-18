@@ -31,7 +31,10 @@
     "chambers" : "Chambers",
     "addChamber" : "Add Chamber",
     "editChamber" : "Edit Chamber",
-    "clients" : "Clients"
+    "clients" : "Clients",
+    "reservations" : "Reservations",
+    "personalDetails" : "Personal details",
+    "reservSuccess" : "Reservation made successfully"
   },
   "buttons" : {
     "login" : "Login",
@@ -50,6 +53,11 @@
     "notDeleted" : "Not Deleted",
     "fullname" : "Full name",
     "name" : "Name",
+    "firstname" : "Firstame",
+    "lastname" : "Lastame",
+    "age" : "Age",
+    "email" : "Email",
+    "phone" : "Phone",
     "username" : "Username",
     "password" : "Password",
     "confirmpassword" : "Confirm password",
@@ -69,7 +77,12 @@
     "type" : "Type",
     "hotel" : "Hotel",
     "price" : "Price",
-    "cin" : "ID card"
+    "cin" : "ID card",
+    "next" : "Next",
+    "previous" : "Previous",
+    "duration" : "Duration",
+    "nbAdultes": "Adults",
+    "nbKids": "Kids"
   },
   "errors" : {
     "error" : "Error",

@@ -15,6 +15,17 @@ export class AccueilComponent implements OnInit {
 
   hotels: Hotel[];
 
+  picIndex = 1;
+
+  pics = [
+    "https://triplanco.com/wp-content/uploads/2019/01/hotel_triplanco.jpg",
+    "https://img.freepik.com/photos-gratuite/piscine-sunset_1203-3192.jpg?size=626&ext=jpg",
+    "https://res.cloudinary.com/simplotel/image/upload/x_0,y_615,w_4813,h_1875,c_crop,q_80,fl_progressive/w_600,h_337,f_auto,c_fit/vits-hotels/Listing_Image_skazsy",
+    "https://image.resabooking.com/images/hotel/TCL_Hotel_Royal_Kenz_Thalasso_&_Spa_.jpg",
+    "https://lh3.googleusercontent.com/proxy/eHUkeH6cfGDFSMyyonkoxs0KU1w48_c-JGY_YgbItnspo6z1jxF_KwxtHLlUSBDYtbsgeoeuczmVmidsVO8oj_33mGVxZ87yTsjTdIqqisHO"
+
+  ]
+
   constructor(
     private router: Router,
     private translate: TranslateService,
@@ -22,6 +33,10 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit() {
     this.getHotels();
+  }
+
+  getPics(i){
+    return this.pics[i];
   }
 
   getHotels() {

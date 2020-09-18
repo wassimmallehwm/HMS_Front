@@ -31,7 +31,10 @@
     "chambers" : "Les chambres",
     "addChamber" : "Ajouter une chambre",
     "editChamber" : "Modifier une chambre",
-    "clients" : "Les clients"
+    "clients" : "Les clients",
+    "reservations" : "Réservations",
+    "personalDetails" :"Détails personnels",
+    "reservSuccess" : "Réservation effectuée avec succès"
   },
   "buttons" : {
     "login" : "Se connecter",
@@ -50,6 +53,11 @@
     "notDeleted" : "Non Supprimé",
     "fullname" : "Nom Complet",
     "name" : "Nom",
+    "firstname" : "Prénom",
+    "lastname" : "Nom",
+    "age" : "Age",
+    "email" : "Email",
+    "phone" : "Tél",
     "username" : "Nom d'utilisateur",
     "password" : "Mot de passe",
     "confirmpassword" : "Confirmez le mot de passe",
@@ -69,7 +77,12 @@
     "type" : "Type",
     "hotel" : "Hôtel",
     "price" : "Prix",
-    "cin" : "Carte d'identité"
+    "cin" : "Carte d'identité",
+    "next" : "Suivant",
+    "previous" : "Précédent",
+    "duration" : "Durée",
+    "nbAdultes": "Adultes",
+    "nbKids": "Enfants"
   },
   "errors" : {
     "error" : "Erreur",

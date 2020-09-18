@@ -1,3 +1,36 @@
-<p>
-  reservation-list works!
-</p>
+<title>{{'titles.reservations' | translate}}</title>
+<h4 class="custom-page-title"><span>{{'titles.reservations' | translate}}</span></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 offset-md-10">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <table class="table">
+        <tr>
+          <td class="name-col"><strong>{{'shared.name' | translate}}</strong></td>
+          <td class="city-col"><strong>{{'shared.duration' | translate}}</strong></td>
+          <td class="stars-col"><strong>{{'shared.price' | translate}}</strong></td>
+          <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
+        </tr>
+        <tr class="row-data" *ngFor="let reservation of reservations" (click)="goToEdit(reservation.id)">
+          <td class="name-col">
+            {{reservation.client.name}}
+          </td>
+          <td class="name-col">
+            {{reservation.duration}}
+          </td>
+          <td class="name-col">
+            {{reservation.price}}
+          </td>
+          <td class="action-col">
+            <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(reservation.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
+            <button class="btn btn-sm btn-outline-danger" (click)="onDelete(reservation.id); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

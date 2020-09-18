@@ -21,6 +21,7 @@ import { AccueilComponent } from './guest/accueil/accueil.component';
 import { NonAuthGuard } from './auth/non-auth.guard';
 import { ClientListComponent } from './clients/client-list/client-list.component';
 import { ReservationListComponent } from './reservations/reservation-list/reservation-list.component';
+import { ReservateComponent } from './guest/reservate/reservate.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'accueil',
     component: AccueilComponent,
+    canActivate: [NonAuthGuard]
+  },
+  {
+    path: 'reservate/:id',
+    component: ReservateComponent,
     canActivate: [NonAuthGuard]
   },
   {

@@ -25,17 +25,7 @@ export class ClientsService {
     }
 
     add(client: Client) {
-      this.http.post(this.url + 'create', client).subscribe(data => {
-        this.router.navigate(['/clients/list']);
-      }, error => {
-        if (error instanceof HttpErrorResponse) {
-          swal({
-            title: 'Warning !',
-            text: error.error.message,
-            type: 'warning'
-          });
-        }
-      });
+      return this.http.post(this.url + 'create', client);
     }
 
     update(client: any) {

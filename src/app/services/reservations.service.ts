@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Httpreservation, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { Reservation } from '../models/reservation.model';
@@ -14,7 +14,7 @@ export class ReservationsService {
 
   private url = environment.apiUrl + 'reservations/';
 
-  constructor(private http: Httpreservation,
+  constructor(private http: HttpClient,
     private router: Router) { }
 
     getAll() {
@@ -25,18 +25,8 @@ export class ReservationsService {
       return this.http.get<Reservation>(this.url + 'findone/' + id);
     }
 
-    add(reservation: Reservation) {
-      this.http.post(this.url + 'create', reservation).subscribe(data => {
-        this.router.navigate(['/reservations/list']);
-      }, error => {
-        if (error instanceof HttpErrorResponse) {
-          swal({
-            title: 'Warning !',
-            text: error.error.message,
-            type: 'warning'
-          });
-        }
-      });
+    add(reservation: Reservation, clientId: any, hotelId: any) {
+      return this.http.post(this.url + 'create/' + clientId + '/' + hotelId, reservation);
     }
 
     update(reservation: any) {

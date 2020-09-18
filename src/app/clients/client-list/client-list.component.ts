@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientsService } from 'src/app/services/clients.service';
 import { Client } from 'src/app/models/client.model';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+
+declare var swal: any;
 
 @Component({
   selector: 'app-client-list',

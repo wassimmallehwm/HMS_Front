@@ -5,8 +5,8 @@
     <div id="sidebar-wrapper" class="bg-theme" data-simplebar="" data-simplebar-auto-hide="true">
       <div class="brand-logo">
        <a routerLink='/'>
-        <img src="assets/images/nav-logo.png" class="logo-icon" alt="logo icon">
-        <h5 class="logo-text">Air Performance</h5>
+        <!-- <img src="assets/images/nav-logo.png" class="logo-icon" alt="logo icon"> -->
+        <h5 class="logo-text">Hotels Management</h5>
       </a>
     </div>
     <div class="user-details">
@@ -54,7 +54,7 @@
             <i class="zmdi zmdi-account"></i> <span>{{'menu.hotels' | translate}}</span>
           </a>
         </li>
-        
+
         <li>
           <a routerLink="/chambers/list" routerLinkActive="active">
             <i class="zmdi zmdi-account"></i> <span>{{'menu.chambers' | translate}}</span>
@@ -113,45 +113,6 @@
 
 
   <ul class="navbar-nav align-items-center right-nav-link">
-    <li class="nav-item dropdown-lg">
-      <a id="notifLink" class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown"
-        href="javascript:void();">
-        <i class="fa fa-bell-o"></i>
-        <span class="badge badge-info badge-up">5</span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-right">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a class="clickable">
-              <div class="media">
-                <div class="media-body">
-
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a class="clickable">
-              <div class="media">
-                <div class="media-body">
-
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a class="clickable">
-              <div class="media">
-                <div class="media-body">
-
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="list-group-item text-center"><a routerLink="/notifications" >See All Notifications</a></li>
-        </ul>
-      </div>
-    </li>
     <li class="nav-item language">
       <a id="userLink" class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect clickable" data-toggle="dropdown">
         <i class="zmdi zmdi-account"></i> {{currentUser.username}}

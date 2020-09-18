@@ -1,14 +1,14 @@
 export class Reservation {
 
     id                      :number;
-    client                  :number;
+    client                  :any;
     chamber                 :number;
     duration                :number;
     price                   :number;
     nbAdultes               :number;
     nbKids                  :number;
     state                   :string;
-    
+
     constructor(json?) {
         this.client                     = json.client;
         this.chamber                    = json.chamber;

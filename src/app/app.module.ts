@@ -29,6 +29,7 @@ import { AccueilComponent } from './guest/accueil/accueil.component';
 import { ReservationAddComponent } from './reservations/reservation-add/reservation-add.component';
 import { ReservationListComponent } from './reservations/reservation-list/reservation-list.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
+import { ReservateComponent } from './guest/reservate/reservate.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http);
@@ -56,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient){
     AccueilComponent,
     ReservationAddComponent,
     ReservationListComponent,
-    ClientListComponent
+    ClientListComponent,
+    ReservateComponent
   ],
   imports: [
     BrowserModule,
