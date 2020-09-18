@@ -1,0 +1,40 @@
+<title>{{'titles.hotels' | translate}}</title>
+<h4 class="custom-page-title"><span>{{'titles.hotels' | translate}}</span></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 offset-md-10">
+        <button (click)="goToAdd()" class="btn btn-add btn-success">
+          <i class="fa fa-plus"></i>
+          {{'buttons.add' | translate}}
+        </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <table class="table">
+        <tr>
+          <td class="name-col"><strong>{{'shared.name' | translate}}</strong></td>
+          <td class="city-col"><strong>{{'shared.city' | translate}}</strong></td>
+          <td class="stars-col"><strong>{{'shared.stars' | translate}}</strong></td>
+          <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
+        </tr>
+        <tr class="row-data" *ngFor="let hotel of hotels" (click)="goToEdit(hotel.id)">
+          <td class="name-col">
+            {{hotel.name}}
+          </td>
+          <td class="name-col">
+            {{hotel.city}}
+          </td>
+          <td class="name-col">
+            <!-- {{hotel.stars}} -->
+            <span *ngFor="let star of arrayOne(hotel.stars)">⭐</span>
+          </td>
+          <td class="action-col">
+            <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(hotel.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
+            <button class="btn btn-sm btn-outline-danger" (click)="onDelete(hotel.id, hotel.name); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

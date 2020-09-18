@@ -13,13 +13,24 @@ import { ProfileComponent } from './users/profile/profile.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { AdminToolsComponent } from './admin-tools/admin-tools.component';
 import { AuthGuard } from './auth/auth.guard';
+import { HotelListComponent } from './hotels/hotel-list/hotel-list.component';
+import { HotelAddComponent } from './hotels/hotel-add/hotel-add.component';
+import { ChamberListComponent } from './chambers/chamber-list/chamber-list.component';
+import { ChamberAddComponent } from './chambers/chamber-add/chamber-add.component';
+import { AccueilComponent } from './guest/accueil/accueil.component';
+import { NonAuthGuard } from './auth/non-auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/accueil',
     pathMatch: 'full',
-    canActivate: [AuthGuard]
+    canActivate: [NonAuthGuard]
+  },
+  {
+    path: 'accueil',
+    component: AccueilComponent,
+    canActivate: [NonAuthGuard]
   },
   {
     path: '',
@@ -81,6 +92,36 @@ const routes: Routes = [
       {
           path: 'users/:id',
           component: UserAddComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'hotels/list',
+          component: HotelListComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'hotels/add',
+          component: HotelAddComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'hotels/:id',
+          component: HotelAddComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'chambers/list',
+          component: ChamberListComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'chambers/add',
+          component: ChamberAddComponent,
+          canActivate: [AuthGuard]
+      },
+      {
+          path: 'chambers/:id',
+          component: ChamberAddComponent,
           canActivate: [AuthGuard]
       }
     ]

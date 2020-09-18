@@ -3,10 +3,9 @@
     "dashboard" : "Tableau de bord",
     "adminTools" : "Outils d'administration",
     "users" : "Utilisateurs",
-    "locations" : "Emplacements",
-    "staff" : "Equipes",
     "roles" : "Roles",
-    "airplanes" : "Avions"
+    "hotels" : "Hotels",
+    "chambers" : "Chambres"
   },
   "titles" : {
     "users" : "Les utilisateurs",
@@ -23,7 +22,13 @@
     "editStaff" : "Modifier une équipe",
     "airplanes" : "Les avions",
     "addAirplane" : "Ajouter un avion",
-    "editAirplane" : "Modifier un avion"
+    "editAirplane" : "Modifier un avion",
+    "hotels" : "Les hôtels",
+    "addHotel" : "Ajouter un hôtel",
+    "editHotel" : "Modifier un hôtel",
+    "chambers" : "Les chambres",
+    "addChamber" : "Ajouter une chambre",
+    "editChamber" : "Modifier une chambre"
   },
   "buttons" : {
     "login" : "Se connecter",
@@ -54,7 +59,15 @@
     "designation" : "Désignation",
     "reactorType" : "Type de réacteur",
     "language" : "Langue",
-    "theme" : "Thème"
+    "theme" : "Thème",
+    "city" : "Ville",
+    "stars" : "Etoiles",
+    "tel" : "Tél",
+    "adresse" : "Adresse",
+    "type" : "Type",
+    "ref" : "Référence",
+    "hotel" : "Hôtel",
+    "price" : "Prix"
   },
   "errors" : {
     "error" : "Erreur",

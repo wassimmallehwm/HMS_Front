@@ -1,30 +1,32 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
-import { Airplane } from '../models/airplane';
+import { Hotel } from '../models/hotel.model';
+
 declare var swal: any;
+
 @Injectable({
   providedIn: 'root'
 })
-export class AirplaneService {
+export class HotelService {
 
-  private url = environment.apiUrl + 'airplanes/';
+  private url = environment.apiUrl + 'hotels/';
 
   constructor(private http: HttpClient,
     private router: Router) { }
 
     getAll() {
-      return this.http.get<Airplane[]>(this.url + 'findAll');
+      return this.http.get<Hotel[]>(this.url + 'findall');
     }
-  
+
     getOne(id: number) {
-      return this.http.get<Airplane>(this.url + 'findOne/' + id);
+      return this.http.get<Hotel>(this.url + 'findone/' + id);
     }
-  
-    add(airplane: Airplane) {
-      this.http.post(this.url + 'add', airplane).subscribe(data => {
-        this.router.navigate(['/airplanes/list']);
+
+    add(hotel: Hotel) {
+      this.http.post(this.url + 'create', hotel).subscribe(data => {
+        this.router.navigate(['/hotels/list']);
       }, error => {
         if (error instanceof HttpErrorResponse) {
           swal({
@@ -35,10 +37,12 @@ export class AirplaneService {
         }
       });
     }
-  
-    update(airplane: any) {
-      this.http.put(this.url + 'update/' + airplane.id, airplane).subscribe(data => {
-        this.router.navigate(['/airplanes/list']);
+
+    update(hotel: any) {
+      const headers = new HttpHeaders;
+      headers.append("Content-Type", "application/json");
+      this.http.put(this.url + 'update/', hotel, {headers}).subscribe(data => {
+        this.router.navigate(['/hotels/list']);
       }, error => {
         if (error instanceof HttpErrorResponse) {
           swal({
@@ -49,7 +53,7 @@ export class AirplaneService {
         }
       });
     }
-  
+
     delete(id: number) {
       return this.http.delete(this.url + 'delete/' + id);
     }

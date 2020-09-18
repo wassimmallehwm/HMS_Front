@@ -3,10 +3,9 @@
     "dashboard" : "Dashboard",
     "adminTools" : "Administration tools",
     "users" : "Users",
-    "locations" : "Locations",
-    "staff" : "Staff",
     "roles" : "Roles",
-    "airplanes" : "Airplanes"
+    "hotels" : "Hotels",
+    "chambers" : "Chambers"
   },
   "titles" : {
     "users" : "Users",
@@ -23,7 +22,13 @@
     "editStaff" : "Edit Staff",
     "airplanes" : "Airplanes",
     "addAirplane" : "Add Airplane",
-    "editAirplane" : "Edit Airplane"
+    "editAirplane" : "Edit Airplane",
+    "hotels" : "Hotels",
+    "addHotel" : "Add Hotel",
+    "editHotel" : "Edit Hotel",
+    "chambers" : "Chambers",
+    "addChamber" : "Add Chamber",
+    "editChamber" : "Edit Chamber"
   },
   "buttons" : {
     "login" : "Login",
@@ -54,7 +59,15 @@
     "designation" : "Designation",
     "reactorType" : "Reactor type",
     "language" : "Language",
-    "theme" : "Theme"
+    "theme" : "Theme",
+    "city" : "City",
+    "stars" : "Stars",
+    "tel" : "Phone",
+    "adresse" : "Adresse",
+    "type" : "Type",
+    "ref" : "Reference",
+    "hotel" : "Hotel",
+    "price" : "Price"
   },
   "errors" : {
     "error" : "Error",

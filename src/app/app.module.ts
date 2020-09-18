@@ -21,6 +21,11 @@ import { UserAddComponent } from './users/user-add/user-add.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AdminToolsComponent } from './admin-tools/admin-tools.component';
+import { HotelListComponent } from './hotels/hotel-list/hotel-list.component';
+import { HotelAddComponent } from './hotels/hotel-add/hotel-add.component';
+import { ChamberAddComponent } from './chambers/chamber-add/chamber-add.component';
+import { ChamberListComponent } from './chambers/chamber-list/chamber-list.component';
+import { AccueilComponent } from './guest/accueil/accueil.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http);
@@ -40,7 +45,12 @@ export function HttpLoaderFactory(http: HttpClient){
     UserAddComponent,
     NavComponent,
     ProfileComponent,
-    AdminToolsComponent
+    AdminToolsComponent,
+    HotelListComponent,
+    HotelAddComponent,
+    ChamberAddComponent,
+    ChamberListComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

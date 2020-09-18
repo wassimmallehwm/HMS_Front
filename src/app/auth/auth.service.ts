@@ -64,9 +64,7 @@ export class AuthService {
   }
 
   refreshToken() {
-    this.http.get(this.refreshUrl, {responseType: 'text'}).subscribe(value => {
-      this.tokenStorage.saveToken(value);
-    });
+    return this.http.get(this.refreshUrl, {responseType: 'text'});
   }
 
   validateToken() {

@@ -31,7 +31,14 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
     this.interv = setInterval(() => {
-      this.authService.refreshToken();
+      this.authService.refreshToken().subscribe(
+        value => {
+          this.tokenStorage.saveToken(value);
+        },
+        error => {
+          this.logout();
+        }
+      );
     }, 30000);
     this.currentLang = this.translate.currentLang;
     this.currentUser = this.tokenStorage.getUser();
