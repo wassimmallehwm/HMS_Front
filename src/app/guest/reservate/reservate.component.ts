@@ -64,6 +64,10 @@ export class ReservateComponent implements OnInit {
     this.formReservation.patchValue({price : price});
   }
 
+  goHome(){
+    this.router.navigate(['/']);
+  }
+
   clientForm(){
     this.form = this.fb.group({
       cin: [null, Validators.compose([Validators.required])],

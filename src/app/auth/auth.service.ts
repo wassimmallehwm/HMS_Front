@@ -38,7 +38,7 @@ export class AuthService {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data.user);
         this.tokenStorage.saveAuthorities(data.authorities);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/hotels/list']);
       }, error => {
         swal({
           title: 'Warning !',

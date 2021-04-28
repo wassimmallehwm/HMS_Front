@@ -64,6 +64,7 @@
     "role" : "Role",
     "action" : "Action",
     "reference" : "Reference",
+    "ref" : "Reference",
     "chief" : "Chief",
     "members" : "Members",
     "profile" : "Profile",

@@ -13,7 +13,6 @@
           <td class="name-col"><strong>{{'shared.name' | translate}}</strong></td>
           <td class="city-col"><strong>{{'shared.duration' | translate}}</strong></td>
           <td class="stars-col"><strong>{{'shared.price' | translate}}</strong></td>
-          <td class="action-col"><strong>{{'shared.action' | translate}}</strong></td>
         </tr>
         <tr class="row-data" *ngFor="let reservation of reservations" (click)="goToEdit(reservation.id)">
           <td class="name-col">
@@ -24,10 +23,6 @@
           </td>
           <td class="name-col">
             {{reservation.price}}
-          </td>
-          <td class="action-col">
-            <button class="btn btn-sm btn-outline-primary" (click)="goToEdit(reservation.id); $event.stopPropagation()">{{'buttons.edit' | translate}}</button> &nbsp;
-            <button class="btn btn-sm btn-outline-danger" (click)="onDelete(reservation.id); $event.stopPropagation()">{{'buttons.delete' | translate}}</button>
           </td>
         </tr>
       </table>
